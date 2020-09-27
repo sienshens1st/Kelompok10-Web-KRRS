@@ -1,0 +1,267 @@
+
+    html,body{
+        margin:0%;
+        overflow-x: hidden; 
+        font-family:sans-serif;    
+        }
+
+    main {
+        background: linear-gradient(180deg,#ffcda5 0%,#ee4d5f 100%);
+        min-height: 110vh;
+    }
+  
+/* nav container */ 
+.nav{
+ background: linear-gradient(180deg,#6b0101 0%,#9f0101 100%);   
+ width:100%;
+ height: 12.2vh;
+ overflow: hidden;
+ transition:height 0.5s ease-in-out;
+
+}
+
+
+.navbar-brand img{
+    padding-left:1rem;
+    padding-top:.82rem;
+}
+
+.navbar-nav {
+    display:flex;
+    list-style: none;
+    text-decoration: none;
+    float:right;
+    padding-top:1.2rem;
+    padding-right:1rem;
+    font: size 1.2rem;
+}
+
+
+.nav .nav-item .nav-link {
+    position: relative;
+    padding:0 .5rem;
+    color:#f5f5f5;
+}
+
+
+.nav-item a{
+    opacity: .5;
+}
+
+.nav-item a:hover {
+    opacity: 0.7;
+}
+/* nav container */ 
+
+
+/*------------------------main section--------------------*/
+
+
+            .image-container{
+                text-align:center;
+            }
+
+            .image-container img{
+                width:360px;
+                height:170px;
+            }
+
+.image-container .text-krrs {
+    font-weight: 600;
+}
+
+
+    /* button daftar */
+        .button_daftar{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .button_daftar button{
+            background:#9f0101;
+            color: white;
+            padding: 14px 20px;
+            margin-top:2rem;
+            border: none;
+            cursor: pointer;
+            width:90%;
+            border-radius: 0.3rem;
+        }
+
+        .button_daftar button:hover{
+          background:linear-gradient(180deg,#6b0101 0%,#9f0101 100%);     
+        }
+           /* button daftar */
+
+
+/*--------------form------------------*/
+
+h1{
+	text-align: center;
+	font-weight: 300;
+}
+ 
+.tulisan_daftarKRRS{
+	text-align: center;
+
+}
+ 
+.kotak_login{
+	width: 450px;
+	background: linear-gradient(180deg,#ffcda5 0%,#ee4d5f 100%);
+	/*meletakkan form ke tengah*/
+	margin: 3rem auto 0;
+	padding: 30px 20px;
+}
+
+/* Add Zoom Animation */
+.animate {
+    animation: fadeIn ease 2s;
+    -webkit-animation: fadeIn ease 2s;
+    -moz-animation: fadeIn ease 2s;
+    -o-animation: fadeIn ease 2s;
+    -ms-animation: fadeIn ease 2s;
+    }
+    @keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+    }
+    
+    @-moz-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+    }
+    
+    @-webkit-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+    }
+    
+    @-o-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+    }
+    
+    @-ms-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+    }
+ 
+label{
+	font-size: 11pt;
+}
+ 
+.form_login{
+	/*membuat lebar form penuh*/
+	box-sizing : border-box;
+	width: 100%;
+	padding: 10px;
+	font-size: 11pt;
+	margin-bottom: 20px;
+}
+ 
+.tombol_lanjut{
+    background: #9f0101;
+	color:white;
+	font-size: 11pt;
+	width: 100%;
+	border: none;
+	border-radius: 3px;
+    padding: 10px 20px;
+    cursor:pointer;
+}
+
+.tombol_lanjut[type="submit"]:hover{
+	background: linear-gradient(180deg,#6b0101 0%,#9f0101 100%);
+}
+ 
+.kembali{
+    background: #9f0101;
+    display:flex;
+	color:white;
+	font-size: 11pt;
+	border: none;
+    border-radius: 3px;
+    margin:0.5rem 0;
+    padding: 10px 20px;
+    cursor:pointer;
+    justify-content: center;
+    text-decoration:none;
+    
+}
+
+.kotak_login a:hover {
+    background: linear-gradient(180deg,#6b0101 0%,#9f0101 100%);
+}
+
+
+
+
+/*--------------form------------------*/
+
+
+
+
+
+
+
+
+
+
+/*------------------------main section--------------------*/
+
+  .toggle-collapse{
+    position:absolute;
+    top:5px;
+    right:10px;
+    cursor:pointer;
+    display:none;
+    }
+    
+  .toggle-collapse .toggle-icon{
+    display:flex;
+    justify-content: flex-end;
+    padding:1.5rem 0;
+    }
+    
+   .toggle-collapse .toggle-icon i{
+     font-size: 1.2rem;
+     color: white;
+     opacity:0.5;
+    }
+    
+    .collapse{
+        height:16rem;
+    }
+
+   
+
+@media only screen and (max-width:991px){
+    .toggle-collapse{
+        display:initial;
+    }
+    .navbar-nav{
+        flex-direction: column;
+        float:left;
+    
+    }
+
+    .nav-item{
+        position:relative;
+        top:3.5rem;
+        padding-bottom: 1.5rem;
+        right:2rem;
+        bottom:.5rem;
+    }
+    .navbar-brand{
+        position:absolute;
+    }
+
+}
+
+@media only screen and (max-width:385px){
+    .image-container img{
+        width:92%;
+    }
+}

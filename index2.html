@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel ="stylesheet" href="css/style2.css"> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"> <!--icon -->
+    <title>KRRS ONLINE FTI</title>
+  </head>
+  <body>
+    <nav class="nav">
+        <div class="nav-menu">
+        
+        <a class="navbar-brand" href="#">
+            <img src="./imgs/untarputih.png" alt="" width="50" height="60">
+          </a>
+          <div class="toggle-collapse">
+            <div class="toggle-icon"><i class="fas fa-bars"></i></div>
+        </div>
+
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="https://www.facebook.com/pages/category/College--
+                -University/FTI-UNTAR-208357829208615/" target="_blank" ><i class="fab fa-facebook-f"></i></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://www.instagram.com/fti.untar/?hl=id" target="_blank" ><i class="fab fa-instagram"></i></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://www.google.com/search?safe=active&sxsrf=ALeKk01aU1m8XuvvuZ9O5Ex1_0ocZFiVo
+                A%3A1599667961599&ei=-f5YX4ecJNP69QO3i5zQDQ&q=nomor+telefon+untar&oq=nomor+telefon+untar&gs_lcp=C
+                gZwc3ktYWIQAzIHCCMQsAIQJzIECAAQDTIGCAAQDRAeMggIABAIEA0QHjIICAAQCBANEB4yCAgAEAgQDRAeMggIABAIEA0QHlDG2gNY
+                xtoDYPTeA2gAcAB4AIABd4gB4QGSAQMwLjKYAQCgAQGqAQdnd3Mtd2l6wAEB&sclient=psy-ab&ved=0ahUKEwjH_O_Eu9zrAhVTfX0K
+                HbcFB9oQ4dUDCAw&uact=5" target="_blank" ><i class="fa fa-phone" aria-hidden="true"></i></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://www.google.com/search?safe=active&sxsrf=ALeKk02ENkJtxsXAEiV9eR9xm5NnhEqdAw%3A
+                1599668060911&ei=XP9YX6yJN9aprtoPnLaCkA4&q=alamat+untar&oq=alamat+untar&gs_lcp=CgZwc3ktYWIQAzIFCAAQywE
+                yAggAMgYIABAWEB4yBggAEBYQHjIGCAAQFhAeMgYIABAWEB4yCAgAEBYQChAeMgYIABAWEB4yBggAEBYQHjIGCAAQFhAeOgQIIxAnOgUIABCxAzoICAAQsQMQg
+                wE6BggjECcQEzoECAAQQ1CjDViiF2CGGGgAcAB4AYABuAGIAeoGkgEEMTEuMZgBAKABAaoBB2d3cy13aXrAAQ
+                E&sclient=psy-ab&ved=0ahUKEwisp530u9zrAhXWlEsFHRybAOIQ4dUDCAw&uact=5" target="_blank"><i class="fa fa-map-marker" aria-hidden="true"></i></a>
+              </li>
+            </ul>
+            
+        </div>
+
+    </nav>
+
+    <main>
+      <!--image section-->
+        <div class="image-container">
+          <img src="imgs/logo-fti-png_2.png" alt="logo fti untar">
+          <h1 class="text-krrs">Pengisian KRRS ONLINE</h1>
+        </div>
+       <!--image section-->
+       <div class="button_daftar" >
+        <button onclick="openForm()">Daftar</button>
+      </div>
+
+        <div class="kotak_login animate" >
+          <p class="tulisan_daftarKRRS">Daftar KRRS</p>
+        
+          <form>
+            <label>Nama</label>
+            <input type="text" name="nama" class="form_login" placeholder="Nama Lengkap...">
+        
+            <label>NIM</label>
+            <input type="text" name="nim" class="form_login" placeholder="Nomor Induk Mahasiswa...">
+            <span class="checking">All fields must be filled!</span>
+            <input type="submit" class="tombol_lanjut" value="Lanjut">
+            
+
+              <a class="kembali" href="./index.html">Kembali</a>
+    
+          </form>
+          
+        </div>
+
+
+    </main>
+
+    
+
+    <!--script-->
+    <script src="js/app2.js"></script>
+    <script src="js/Jquery3.5.1.min.js"></script>
+    <!--script-->
+
+
+    <script>
+      $(document).ready(function(){
+
+/*tanda '$' in js for calling class */
+    $nav = $('.nav');
+    $toggleCollapse = $('.toggle-collapse');
+
+    
+        /*click event on toggle menu */
+        $toggleCollapse.click(function(){
+         $nav.toggleClass('collapse');
+
+        });
+
+ });    
+
+
+    </script>
+  </body>
+</html>
