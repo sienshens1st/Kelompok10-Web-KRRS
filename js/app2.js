@@ -21,13 +21,18 @@ form.addEventListener('submit',(event)=>{
     const formData = new FormData(form);
     const name = formData.get('nama');
     const nim = formData.get('nim');
+
     
     if (myTrim(name).length == 0 || myTrim(nim).length == 0){
         checkingFields.style.display = '';
     }
-
     if (myTrim(name).length > 0 && myTrim(nim).length > 0){
         checkingFields.style.display = 'none';
+       location.href = './mainPage/home.html';
     }
 
 });
+
+// export default function getData(){
+//     console.log('hahaha');
+// }
