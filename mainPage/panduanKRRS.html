@@ -5,20 +5,124 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panduan KRRS</title>
     
+    <style>
+         /*------------------------ nav style ------------------*/
+         body,html{
+            margin:0%;
+            overflow-x: hidden;
+            padding:0%;
+            box-sizing: border-box;
+            font-family:sans-serif;
+            height: 110vh;
+            
+        }
+        
+        
+         .header-container{
+        overflow:hidden;
+        display:flex;
+        justify-content: center;
+        display:block;
+        font-size: .7rem;
+        background:linear-gradient(180deg,#6b0101 0%,#9f0101 100%);   
+        height: 12.2vh;
+        max-height: 12.2vh;
+        padding-bottom: .5rem;
+        
+
+        }
+
+        .header-container h1{
+            color:white;
+            font-size: 1.1rem;
+            text-align: center;
+        }
+        
+
+        /* nav container */ 
+        .nav-container{
+            background: linear-gradient(180deg,#6b0101 0%,#9f0101 100%);   
+            width:100%;
+            overflow: hidden;
+            display:grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        
+            
+        }
+
+
+        .nav-link{
+        /*border-right: 2px solid black;*/ 
+            list-style-type: none;
+            cursor: pointer;
+            
+        
+            
+        }
+        .nav-link a{
+            text-decoration: none;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            padding:25px 0;
+            color:White; 
+            
+            
+            
+        }
+
+        .menu-item li:hover{
+            background: linear-gradient(180deg,#6b0101 0%,#b80000 100%);  
+            
+        }
+
+        .onPanduan{
+            background: linear-gradient(180deg,#6b0101 0%,#b80000 60%);
+            border-radius: .5rem;
+            
+        }
+            /*------------------------ nav style ------------------*/
+    </style>
 </head>
 <body>
-    <nav class="showNav"></nav>
+<!------------------------  navbar  ---------------------->
+<div class="header-container">
+    <h1>KRRS ONLINE</h1>
+
+<h1>Fakultas Teknologi Informasi</h1>
+</div>
+<nav class="nav-container">
+
+<div class="menu-item">
+    <li class="nav-link onHome">
+        <a href="home.html">Home</a>
+    </li>
+</div>
+<div class="menu-item">
+    <li class="nav-link onKRRS">
+        <a href="krrsReguler.html">KRRS Reguler</a>
+    </li>
+</div>
+    <div class="menu-item">
+        <li class="nav-link onCetak">
+            <a href="cetakKRRS.html">Cetak KRRS</a>
+        </li>
+    </div>
+    <div class="menu-item">
+        <li class="nav-link onPanduan">
+            <a href="panduanKRRS.html">Panduan KRRS</a>
+        </li>
+    </div>
+
+</nav>
+<!---------------------  navbar  ---------------------->
     panduan krrs
+
 
 
 
 
     <script src="../js/Jquery3.5.1.min.js"></script>
 
-    <script>
-        $(document).ready(function(){
-                $('.showNav').load('navMain.html');  
-        });
-    </script>
 </body>
 </html>

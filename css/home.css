@@ -1,5 +1,6 @@
 html,body{
     margin:0%;
+    padding:0%;
     overflow-x: hidden; 
     font-family:sans-serif;    
     }
@@ -27,11 +28,18 @@ html,body{
     font-size: medium;
 }
 
+.image-untar{
+    padding-top: 2.5rem;
+    width:200px;
+    max-width:40%;
+
+}
+
 footer{
     position:relative;
     bottom:0;
     display:flex;
     justify-content: center;
-    padding-bottom:4rem;
+    padding-bottom:3rem;
     font-size: x-small;
 }
