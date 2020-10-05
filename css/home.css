@@ -1,8 +1,25 @@
+@import url(../font.css);
+
+:root{
+
+  /*Gradient color*/
+  --sky: linear-gradient(120deg,#a1c4fd 0%,#c2e9fb 100%);
+ 
+
+
+  /*theme font-family*/
+  --Abel:'Abel',cursive;
+  --Anton:'Anton',cursive;
+}
+
+
+
+
 html,body{
     margin:0%;
     padding:0%;
     overflow-x: hidden; 
-    font-family:sans-serif;    
+    font-family:sans-serif;
     }
 
 
