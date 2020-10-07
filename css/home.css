@@ -40,19 +40,19 @@ html,body{
     text-align: center;
     justify-content: center;
     align-items:center;
-    height:70vh;
+    min-height:80vh;
     padding-top:4.5rem;
     font-size: medium;
 }
 
 .image-untar{
-    padding-top: 2.5rem;
+    padding:2rem 0;
     width:200px;
     max-width:40%;
 
 }
 
-footer{
+.footer{
     position:relative;
     bottom:0;
     display:flex;
