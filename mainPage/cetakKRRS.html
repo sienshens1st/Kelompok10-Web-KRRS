@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Cetak KRRS</title>
     <style>
          /*------------------------ nav style ------------------*/
@@ -12,7 +13,7 @@
             padding:0%;
             box-sizing: border-box;
             font-family:sans-serif;
-            height: 110vh;
+            height: auto;
             
         }
 
@@ -78,6 +79,10 @@
             border-radius: .5rem;
         }
             /*------------------------ nav style ------------------*/
+
+        .container-bawah{
+            background: url(..)
+        }
     </style>
 </head>
 <body>
@@ -112,13 +117,97 @@
 
     </nav>
     <!---------------------  navbar  ---------------------->
-    cetak krrs
+    <div class ="container-bawah">
+        <style>
+            .container-bawah{
+                background:url(../imgs/grey.jpg);
+                height: 100vh;
+            }
+        </style>
+            <div class="site">
+                <div>
+                    <br></br>
+                    <h1 style="text-align:center">Cetak KRRS ONLINE</h1>
+                    <h2 style="text-align:center" >Mahasiswa Fakultas Teknologi Informasi</h2>
+                </div> 
+            </div>
+            <div style="margin-left:9.8vw">
+                <div class="nam"></div>
+                <div class="nim"></div>
+            </div>       
+            <style>
+                    table {
+                      font-family: arial, sans-serif;
+                      border-collapse: collapse;
+                      width: 80%;
+                    }
+                    table th{
+                        background-color: #1e90ff
+                    }
+                    td, th {
+                     
+                      text-align: left;
+                      padding: 8px;
+                    }
+                    
+                    tr:nth-child(even) {
+                      background-color: #e6e6fa;
+                    }
+                    tr:nth-child(odd) {
+                      background-color: #fff5ee;
+                    }
+                    .center {
+                         margin-left: auto;
+                        margin-right: auto;
+                    }
+                    .xcenter {
+  margin: 0;
+  position: absolute;
+  
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+            </style>  
+                    
+                    <table class="center">
+                      <tr>
+                        <th>Mata Kuliah</th>
+                        <th>Dosen Pembimbing</th>
+                        <th>Kode</th>
+                        <th>Beban SKS</th>
+                      </tr>
+                      <tr>
+                        <td>IPA</td>
+                        <td>PPEPKK</td>
+                        <td>BAFA</td>
+                        <td>4</td>
+                      </tr>
+                      <tr>
+                            <td>TIDUR</td>
+                            <td>76ers</td>
+                            <td>BB4CSH</td>
+                            <td>4</td>
+                     </tr>
+                     <tr>
+                            <td>PIPIZ</td>
+                            <td>Magjaijgiaj</td>
+                            <td>BBCSH</td>
+                            <td>4</td>
+                          </tr>
+                     
+                </table>
+    
+                <br></br>
 
-
-
-
+                <div class="xcenter">
+                        <button>Cetak KRRS</button>
+   
+                </div>
+         </div>
+        
     <script src="../js/Jquery3.5.1.min.js"></script>
-
+    <script src="../js/cetak.js"></script>
    
 </body>
 </html>

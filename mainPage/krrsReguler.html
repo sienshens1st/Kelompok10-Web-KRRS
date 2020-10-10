@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KRRS REGULER</title>
-    <style>
+    <style type="text/css">
          /*------------------------ nav style ------------------*/
+
          body,html{
             margin:0%;
             overflow-x: hidden;
             padding:0%;
             box-sizing: border-box;
             font-family:sans-serif;
-            height: 110vh;
-            
+            height: auto;
+           
         }
-        
          .header-container{
         overflow:hidden;
         display:flex;
@@ -77,6 +77,63 @@
             background: linear-gradient(180deg,#6b0101 0%,#b80000 60%);
             border-radius: .5rem;
         }
+
+        .judul-container h1{
+            color:black;
+            font-size: 28px;
+            text-align: center;
+        }
+        .judul-container2 h1{
+            color:black;
+            font-size: 25px;
+            text-align: center;
+        }
+        .judul-container3 p{
+            margin-left: 3%;
+        
+        }
+
+        .tabel1 {
+            font-family: sans-serif;
+            color: #444;
+            border-collapse: collapse;
+            width: 90%;
+            border: 1px solid #f2f5f7;
+            margin-top: 3%;
+            margin-left: 3%;
+        }
+        .tabel1 tr th{
+            background-color: #1e90ff;
+            color: #fff;
+            font-weight: normal;
+        }
+        .tabel1, th, td{
+            padding: 8px 20px;
+            text-align: center;
+        }
+        .tabel1 tr:nth-child(even){
+            background: #e6e6fa;
+        
+        }
+        .tabel1 tr:nth-child(odd){
+            background:#fff5ee;
+          
+        }
+        .opti{
+            margin-left: 3%;
+        }
+        
+        .submit {
+            margin-top: 3%;
+            margin-bottom: 3%;
+            text-align: center;
+        }
+        .container-main {
+            overflow: hidden;
+            background-image: url(../imgs/grey.jpg);
+
+        }
+
             /*------------------------ nav style ------------------*/
     </style>
 </head>
@@ -112,12 +169,153 @@
 
     </nav>
     <!---------------------  navbar  ---------------------->
-    krrs reguler
+    <div class="container-main">
+    <div class="judul-container"> 
+        <h1>Pengisian KRRS Online</h1>
+    </div> 
+    <div class="judul-container2">
+        <h1>Tahun Ajaran 2020/2021 Semester Ganjil</h1>
+    </div>
+    <div class="judul-container3">
+    <p><strong>NIM          : 535190042</strong></p>
+    <p><strong>Nama         : Jimmy Santoso</strong></p>  
+    <p><strong>IPS Terakhir : 3.12</strong></p>
+    <p><strong>Beban        : 22</strong></p> 
+    </div>
+    <p class="opti">Pilih mata kuliah yang ingin Anda daftar</p>
+   
+    <table class="tabel1">
+    <tr>
+        <th>Pilih</th>
+        <th>Kode</th>
+        <th>Mata Kuliah</th>
+        <th>Hari</th>
+        <th>Jam</th>
+        <th>SKS</th>
+    </tr>
 
+    <tr>
+        <td><input type="checkbox" id="option"/></td>
+        <td>DU11181</td>
+        <td>Bahasa Indonesia</td>
+        <td>Senin</td>
+        <td>13.30 - 15.00</td>
+        <td>2</td>
+    </tr>
 
+    <tr>
+        <td><input type="checkbox" id="option"/></td>
+        <td>DU11181</td>
+        <td>Bahasa Indonesia</td>
+        <td>Selasa</td>
+        <td>14.10 - 15.40</td>
+        <td>2</td>
+    </tr>
 
+    <tr>
+        <td><input type="checkbox" id="option"/></td>
+        <td>DU11181</td>
+        <td>Bahasa Indonesia</td>
+        <td>Rabu</td>
+        <td>17.30 - 19.00</td>
+        <td>2</td>
+    </tr>
+
+    <tr>
+        <td><input type="checkbox" id="option"/></td>
+        <td>DU11181</td>
+        <td>Dasar Kewirausahaan</td>
+        <td>Senin</td>
+        <td>11.30 - 13.00</td>
+        <td>2</td>
+    </tr>
+
+    <tr>
+        <td><input type="checkbox" id="option"/></td>
+        <td>DU11181</td>
+        <td>Dasar Kewirausahaan</td>
+        <td>Kamis</td>
+        <td>15.30 - 17.00</td>
+        <td>2</td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" id="option"/></td>
+        <td>DU11171</td>
+        <td>Ilmu Kealaman Dasar</td>
+        <td>Senin</td>
+        <td>15.30 - 17.00</td>
+        <td>2</td>
+    </tr>
+
+    <tr>
+        <td><input type="checkbox" id="option"/></td>
+        <td>DU11171</td>
+        <td>Ilmu Kealaman Dasar</td>
+        <td>Rabu</td>
+        <td>15.30 - 17.00</td>
+        <td>2</td>
+    </tr>
+
+    <tr>
+        <td><input type="checkbox" id="option"/></td>
+        <td>DU11161</td>
+        <td>Ilmu Sosial & Budaya Dasar</td>
+        <td>Jumat</td>
+        <td>15.30 - 17.00</td>
+        <td>2</td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" id="option"/></td>
+        <td>DU11161</td>
+        <td>Ilmu Sosial & Budaya Dasar</td>
+        <td>Jumat</td>
+        <td>17.30 - 19.00</td>
+        <td>2</td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" id="option"/></td>
+        <td>DU11014</td>
+        <td>Pendidikan Agama Budha</td>
+        <td>Jumat</td>
+        <td>11.30 - 13.00</td>
+        <td>2</td>
+    </tr>
+
+    <tr>
+        <td><input type="checkbox" id="option"/></td>
+        <td>DU11014</td>
+        <td>Pendidikan Agama Budha</td>
+        <td>Jumat</td>
+        <td>13.30 - 15.00</td>
+        <td>2</td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" id="option"/></td>
+        <td>ES41014</td>
+        <td>Java Programming</td>
+        <td>Selasa</td>
+        <td>07.30 - 11.00</td>
+        <td>4</td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" id="option"/></td>
+        <td>ES41014</td>
+        <td>Java Programming</td>
+        <td>Kamis</td>
+        <td>07.30 - 11.00</td>
+        <td>4</td>
+    </tr>
+    
+
+    </table>
+    <div class="submit">
+        <button type="submit" >Submit</button>
+    </div>
+        </div>
+
+  
 
     <script src="../js/Jquery3.5.1.min.js"></script>
-
+    
 </body>
 </html>
