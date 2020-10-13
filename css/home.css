@@ -28,7 +28,7 @@ html,body{
     background: url('../imgs/grey.jpg');
     background-size: cover;
     background-position: center;
-    background-repeat: repeat;
+    background-attachment: fixed;
 
 
 }
