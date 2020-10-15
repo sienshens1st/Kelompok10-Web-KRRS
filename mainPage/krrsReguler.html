@@ -140,6 +140,74 @@
         }
 
             /*------------------------ nav style ------------------*/
+
+
+
+            /*------------------submit overlay------------------*/
+            .modal {
+            position: fixed;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%) scale(0);/* x direction , y direction */
+            transition:200ms ease-in-out;
+            border:1px solid black;
+            border-radius:10px;
+            z-index: 10;
+            background-color: whitesmoke;
+            width:500px;
+            max-width: 80%;
+        }
+
+        .modal.active{
+            transform: translate(-50%,-50%) scale(1);/* x direction , y direction */
+        }
+
+        .modal-header{
+            padding:10px 15px;
+            display:flex;
+            align-items: center;
+            border-bottom: 1px solid black;
+        }
+
+        .modal-header .title{
+            font-size: 1.25rem;
+    
+        }
+
+
+        .modal-body{
+            padding:10px 15px;
+        }
+
+        #overlay{
+            position: fixed;
+            opacity: 0;
+            transition:200ms ease-in-out;
+            top:0;
+            left:0;
+            right:0;
+            bottom:0;
+            background-color: rgba(0,0,0,.5);
+            pointer-events: none;
+        }
+
+        #overlay.active{
+            pointer-events:all;
+            opacity: 1;
+        }
+
+        .submit-btn{
+           
+            padding: .5rem 1rem;
+            outline: none;
+            border-radius: 1.5rem;
+            pointer-events: fill;
+            background-color: whitesmoke;
+            width:100px;
+            cursor: pointer;
+            
+        }
+            /*------------------submit overlay------------------*/
     </style>
 </head>
 <body>
@@ -320,12 +388,27 @@
     
 
     </table>
-    <div class="submit">
-        <button type="submit" >Submit</button>
-    </div>
+    <!-- submit overlay -->
+        <div class="submit">
+            <button data-modal-target="#modal">Submit</button>
+            <div class="modal" id="modal">
+                <div class="modal-header">
+                    <div class="title">Apakah anda yakin ? KRRS tidak dapat dirubah kembali</div>
+        
+                </div>
+                <div class="modal-body">
+                   <button data-close-button class="submit-btn">Tidak</button>
+                   <button data-close-button class="submit-btn" id="submit-ya">Ya</button>
+                </div>       
+            </div>
+            <div id="overlay"></div>
+        </div>
+  <!-- submit overlay -->
+   
         </div>
 
   
+
 
     <script src="../js/Jquery3.5.1.min.js"></script>
     <script src="../js/krrsReguler.js"></script>
