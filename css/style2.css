@@ -85,7 +85,7 @@
             margin-top:2rem;
             border: none;
             cursor: pointer;
-            width:90%;
+            width:40%;
             border-radius: 0.3rem;
         }
 
@@ -153,11 +153,12 @@ label{
 }
  
 .form_login{
-	/*membuat lebar form penuh*/
+    /*membuat lebar form penuh*/
+    margin-top: 8px;
 	box-sizing : border-box;
 	width: 100%;
 	padding: 10px;
-	font-size: 11pt;
+    font-size: 11pt;
 	margin-bottom: 20px;
 }
  

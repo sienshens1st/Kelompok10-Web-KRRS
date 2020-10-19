@@ -88,25 +88,31 @@
             font-size: 25px;
             text-align: center;
         }
+        .judul-container3{
+            margin-left: 4.7vw;
+        }
+
         .judul-container3 p, pre{
             margin-left: 3%;
             font-family: sans-serif;
+            
         }
 
         .tabel1 {
             box-sizing: border-box;
-            font-family: sans-serif;
-            color: #444;
             border-collapse: collapse;
             width: 85%;
             border: 1px solid #f2f5f7;
             margin-top: 2%;
             margin: 0 auto;
+        
+
         }
         .tabel1 tr th{
             background-color: #1e90ff;
             color: #fff;
-            font-weight: bolder;
+            
+           
         }
         .tabel1, th, td{
             padding: 1% .3rem;
@@ -129,6 +135,17 @@
             margin-bottom: 3%;
             text-align: center;
         }
+
+
+
+        .submit-awal{
+                    padding:5px 12px;
+                    font-size: 100;
+                    cursor:pointer;
+                    border-radius: .5rem;
+
+        }
+
         .container-main {
             overflow: hidden;
             background-image: url(../imgs/grey.jpg);
@@ -261,8 +278,9 @@
             <div class="beban">
                 <p><strong>Beban &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 22 SKS</strong></p>
             </div>
+         <p class="opti">Pilih Mata Kuliah yang ingin Anda daftarkan: </p>
    </div>
-    <p class="opti">Pilih mata kuliah yang ingin Anda daftar</p>
+
    
     <table class="tabel1">
     <tr>
@@ -390,7 +408,7 @@
     </table>
     <!-- submit overlay -->
         <div class="submit">
-            <button data-modal-target="#modal">Submit</button>
+            <button data-modal-target="#modal" class="submit-awal"><strong>Submit</strong></button>
             <div class="modal" id="modal">
                 <div class="modal-header">
                     <div class="title">Apakah anda yakin ? KRRS tidak dapat dirubah kembali</div>
