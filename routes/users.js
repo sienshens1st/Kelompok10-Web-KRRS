@@ -37,8 +37,8 @@ router.post('/register',isLoginAuthenticated, (req,res)=>{
         errors.push({msg:'Harap isi semua Kolom!'})
     }
 
-    if(password.length < 2){
-        errors.push({msg:'Kata sandi minimal harus 2 karakter'})
+    if(password.length < 6){
+        errors.push({msg:'Kata sandi minimal harus 6 karakter'})
     }
     
     if(errors.length > 0){
