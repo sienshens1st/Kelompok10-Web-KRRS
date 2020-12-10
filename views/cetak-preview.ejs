@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/cetak.css">
+        <link rel="Stylesheet" href="../css/cetak-preview.css">
+    
+    <title>Cetak KRRS</title>
+</head>
+<body>
+    <!------------------------  navbar  ---------------------->
+    
+    <!---------------------  navbar  ---------------------->
+
+    <div class ="container-bawah">
+       <div id="printDiv">
+        <div class="site">
+           
+            <div>
+                <br></br>
+                <h2>Kartu Studi Sementara (KSS)</h2>
+                <h3>Semester Ganjil 2020/2021</h3>
+            </div> 
+        </div>
+            
+            <div class="userInfo">
+                   <strong>Nama &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <%= typeof user_name != 'undefined' ? user_name : ''%></strong><br>
+
+                    <strong>Nim &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <%= typeof user_nim != 'undefined' ? user_nim : ''%></strong><br>
+
+                    <strong>IPS Terakhir&nbsp;: <%= typeof user_ips != 'undefined' ? user_ips : ''%></strong><br>
+
+                    <strong>Beban &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <%= typeof user_beban != 'undefined' ? user_beban : ''%></strong><br><br>
+            </div>       
+           
+       
+            <div class="imgUntar">
+                <!-- <img class="image-untar" src="../imgs/untar polos.png"alt="logo untar"> -->
+                <table >
+                    <tr>
+                      <th>Kode</th>
+                      <th>Mata Kuliah</th>
+                      <th>Hari</th>
+                       <th>Jam</th>
+                      <th>Beban SKS</th>
+                    </tr>
+                  
+                    <% if(user_matkul){ %>
+                      <% user_matkul.forEach(data=>{ %>
+                          <% list.forEach(data2=>{ %>
+                             <% if(data == data2.matkul){ %>
+                              <tr>
+                                  <td><%=data2.kode%></td>
+                                  <td><%=data2.mataKuliah%></td>
+                                  <td><%=data2.hari%></td>
+                                   <td><%=data2.jam%></td>
+                                  <td><%=data2.beban%></td>
+                                  <% user_total_beban +=  parseInt(data2.beban) %>
+                                </tr>
+                              <% } %>
+                          <% }) %>
+                     <% }) %>
+                     <tr>
+                      <td></td>
+                      <td><strong>TOTAL SKS</strong></td>
+                      <td></td>
+                      <td></td>
+                      <td><strong><%= user_total_beban %></strong></td>
+                     </tr>
+                   
+                 <%  } %>
+
+                    
+                     
+              </table>
+               
+
+    </div>
+        
+
+                        <div >
+                            <button id="pdfDownloader" style="margin-top:1rem">Cetak KRRS</button>
+                            <!-- <button id="buttonclick">Cetak KRRS cara 2</button> -->
+                            <p><b>PERHATIAN</b></p>
+                            <p>1. Nomor registrasi Anda adalah
+                                    <strong class="font-size"><%= typeof user_kode != 'undefined' ?  user_kode : ''%></strong><br>
+                               <div style="margin-left: 1rem;">Harap catat dan ingat nomor ini dan <strong>Jangan diperlihatkan kepada orang lain.</strong> <br>
+                                Nomor ini digunakan jika anda akan mengubah atau mengganti jadwal kuliah.</div>
+                                2. Nomor registrasi Anda akan berbeda setiap semester.<br>
+                                3. KSS ini sebagai tanda bukti pengambilan KSM (Kartu Study Mahasiswa)</p>
+    
+                                <footer>&copy; Copyright 2020 Universitas Tarumanagara</footer>
+                        </div>
+                     
+                    
+
+
+        
+                    </div>
+
+
+         </div>
+        
+    <script src="../js/Jquery3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+    <script src="../js/cetak.js"></script>
+   
+</body>
+</html>

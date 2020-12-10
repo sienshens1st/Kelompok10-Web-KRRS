@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/krrsOnline.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"><!--icon -->
+    <title>KRRS REGULER</title>
+  
+</head>
+<body>
+    <!------------------------  navbar  ---------------------->
+    <div class="header-container">
+        <div class="logoutbutton"> 
+            <a href="/users/logout"> <i class="fas fa-sign-out-alt"></i></a>
+            </div>
+        <h1>KRRS ONLINE</h1>
+    
+    <h1>Fakultas Teknologi Informasi</h1>
+    </div>
+    <nav class="nav-container">
+        
+        <div class="menu-item">
+            <li class="nav-link onHome">
+                <a href="/mainPage">Home</a>
+            </li>
+        </div>
+        <div class="menu-item">
+            <li class="nav-link onBiodata">
+                <a href="/mainPage/biodata">Profile</a>
+            </li>
+        </div>
+        <div class="menu-item">
+            <li class="nav-link onKRRS">
+                <a href="/mainPage/krrs">KRRS Online</a>
+            </li>
+        </div>
+            <div class="menu-item">
+                <li class="nav-link onCetak">
+                    <a href="/mainPage/cetak">Cetak KRRS</a>
+                </li>
+            </div>
+            <div class="menu-item">
+                <li class="nav-link onPanduan">
+                    <a href="/mainPage/panduan">Panduan</a>
+                </li>
+            </div>
+
+        </nav>
+    <!---------------------  navbar  ---------------------->
+    <div class="container-main">
+    <div class="judul-container"> 
+        <h1>Pengisian KRRS Online</h1>
+    </div> 
+    <div class="judul-container2">
+        <h1>Tahun Ajaran 2020/2021 Semester Ganjil</h1>
+    </div>
+    <div class="judul-container3">
+            <div class="nama">
+                <p><strong>Nama &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <%= typeof user_name != 'undefined' ? user_name : ''%></strong></p>
+            </div>
+            <div class="nim">
+                <p><strong>Nim &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <%= typeof user_nim != 'undefined' ? user_nim : ''%></strong></p>
+            </div>  
+ 
+            <div class="IPK">
+                <p><strong>IPS Terakhir &nbsp;: <%= typeof user_ips != 'undefined' ? user_ips : ''%></strong></p>
+            </div>
+            <div class="beban">
+                <p><strong>Beban &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:  <span class="beban2"><%= typeof user_beban != 'undefined' ? user_beban : ''%></span></strong></p>
+            </div>
+         <p class="opti">Pilih Mata Kuliah yang ingin Anda daftarkan: </p>
+       
+   </div>
+                <%- include('partials/messages'); %>
+
+
+   <form  id="myvalid" action="/mainPage/krrs" method="POST">
+
+    <table class="tabel1">
+        <tr>
+            <th>Pilih</th>
+            <th>Kode</th>
+            <th>Mata Kuliah</th>
+            <th>Hari</th>
+            <th>Jam</th>
+            <th>Beban SKS</th>
+        </tr>
+    
+    
+        <tr>
+            <td><input type="checkbox" class="checkIndo" name="mataKuliah" value="bindo" id="bindo" onclick="totalBeban()"></td>
+            <td>DU11182</td>
+            <td>Bahasa Indonesia</td>
+            <td>Rabu</td>
+            <td>17.30 - 19.00</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" class="checkIndo" name="mataKuliah" value="bindo1" id="bindo" onclick="totalBeban()"></td>
+            <td>DU11183</td>
+            <td>Bahasa Indonesia</td>
+            <td>Rabu</td>
+            <td>17.30 - 19.00</td>
+            <td>2</td>
+        </tr>
+    
+        <tr>
+            <td><input type="checkbox" class="checkKewirausahaan" name="mataKuliah" value="kewirausahaan" id="kewirausahaan" onclick="totalBeban()"/></td>
+            <td>DU11181</td>
+            <td>Dasar Kewirausahaan</td>
+            <td>Senin</td>
+            <td>11.30 - 13.00</td>
+            <td>2</td>
+        </tr>
+
+        <tr>
+            <td><input type="checkbox" class="checkKealaman" name="mataKuliah" value="kealaman" id="kealaman" onclick="totalBeban()"/></td>
+            <td>DU11171</td>
+            <td>Ilmu Kealaman Dasar</td>
+            <td>Rabu</td>
+            <td>15.30 - 17.00</td>
+            <td>2</td>
+        </tr>
+    
+        <tr>
+            <td><input type="checkbox" class="checkSosial" name="mataKuliah" value="sosial" id="sosial" onclick="totalBeban()"/></td>
+            <td>DU11161</td>
+            <td>Ilmu Sosial & Budaya Dasar</td>
+            <td>Jumat</td>
+            <td>15.30 - 17.00</td>
+            <td>2</td>
+        </tr>
+ 
+    
+        <tr>
+            <td><input type="checkbox" class="checkBudha" name="mataKuliah" value="budha" id="budha" onclick="totalBeban()"/></td>
+            <td>DU11014</td>
+            <td>Pendidikan Agama Budha</td>
+            <td>Jumat</td>
+            <td>13.30 - 15.00</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" class="checkJava" name="mataKuliah" value="java" id="java" onclick="totalBeban()"/></td>
+            <td>DU11017</td>
+            <td>Java Programming</td>
+            <td>Selasa</td>
+            <td>07.30 - 11.00</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" class="checkJava" name="mataKuliah" value="java1" id="java" onclick="totalBeban()"/></td>
+            <td>DU11018</td>
+            <td>Java Programming</td>
+            <td>Selasa</td>
+            <td>07.30 - 11.00</td>
+            <td>4</td>
+        </tr>
+
+        <tr>
+            <td><input type="checkbox" class="checkSisterd" name="mataKuliah" value="sisterd" id="sisterd" onclick="totalBeban()"/></td>
+            <td>DU11213</td>
+            <td>Sistem Terdistribusi</td>
+            <td>Rabu</td>
+            <td>07.30 - 11.00</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" class="checkSisterd" name="mataKuliah" value="sisterd1" id="sisterd" onclick="totalBeban()"/></td>
+            <td>DU11214</td>
+            <td>Sistem Terdistribusi</td>
+            <td>Rabu</td>
+            <td>07.30 - 11.00</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" class="checkDatabase" name="mataKuliah" value="database" id="database" onclick="totalBeban()"/></td>
+            <td>DU11163</td>
+            <td>Database System</td>
+            <td>Jumat</td>
+            <td>07.30 - 11.00</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" class="checkDatabase" name="mataKuliah" value="database1" id="database" onclick="totalBeban()"/></td>
+            <td>DU11164</td>
+            <td>Database System</td>
+            <td>Jumat</td>
+            <td>07.30 - 11.00</td>
+            <td>4</td>
+        </tr>
+
+        <tr>
+            <td><input type="checkbox" class="checkTechnopreneurship" name="mataKuliah" value="technopreneurship" id="technopreneurship" onclick="totalBeban()"/></td>
+            <td>DU11322</td>
+            <td>Technopreneurship</td>
+            <td>Rabu</td>
+            <td>11.30 - 13.10</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" class="checkStatistik" name="mataKuliah" value="statistik" id="statistik" onclick="totalBeban()"/></td>
+            <td>DU11195</td>
+            <td>Statistik</td>
+            <td>Senin</td>
+            <td>07.30 - 11.00</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" class="checkStatistik" name="mataKuliah" value="statistik1" id="statistik" onclick="totalBeban()"/></td>
+            <td>DU11196</td>
+            <td>Statistik</td>
+            <td>Jumat</td>
+            <td>07.30 - 11.00</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" class="checkBasis" name="mataKuliah" value="basis" id="basis" onclick="totalBeban()"/></td>
+            <td>DU11224</td>
+            <td>Manajemen Basis Data</td>
+            <td>Selasa</td>
+            <td>11.30 - 13.10</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" class="checkBasis" name="mataKuliah" value="basis1" id="basis" onclick="totalBeban()"/></td>
+            <td>DU11225</td>
+            <td>Manajemen Basis Data</td>
+            <td>Selasa</td>
+            <td>11.30 - 13.10</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" class="checkRiset" name="mataKuliah" value="riset" id="riset" onclick="totalBeban()"/></td>
+            <td>DU11264</td>
+            <td>Metode Riset</td>
+            <td>Senin</td>
+            <td>14.30 - 15.50</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" class="checkAplikasi" name="mataKuliah" value="aplikasi" id="aplikasi" onclick="totalBeban()"/></td>
+            <td>DU11275</td>
+            <td>Pengembangan Aplikasi Berbasis Web</td>
+            <td>Kamis</td>
+            <td>07.30 - 13.10</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" class="checkAplikasi" name="mataKuliah" value="aplikasi1" id="aplikasi" onclick="totalBeban()"/></td>
+            <td>DU11276</td>
+            <td>Pengembangan Aplikasi Berbasis Web</td>
+            <td>Kamis</td>
+            <td>07.30 - 13.10</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" class="checkLunak" name="mataKuliah" value="lunak" id="lunak" onclick="totalBeban()"/></td>
+            <td>DU11280</td>
+            <td>Dasar Rekayasa Perangkat Lunak</td>
+            <td>Kamis</td>
+            <td>13.30 - 17.10</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" class="checkLunak" name="mataKuliah" value="lunak1" id="lunak" onclick="totalBeban()"/></td>
+            <td>DU11281</td>
+            <td>Dasar Rekayasa Perangkat Lunak</td>
+            <td>Kamis</td>
+            <td>13.30 - 17.10</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" class="checkGrafika" name="mataKuliah" value="grafika" id="grafika" onclick="totalBeban()"/></td>
+            <td>DU11250</td>
+            <td>Grafika Komputer</td>
+            <td>Senin</td>
+            <td>17.00 - 18.30</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" class="checkMikro" name="mataKuliah" value="mikro" id="mikro" onclick="totalBeban()"/></td>
+            <td>DU11255</td>
+            <td>Mikrokontroler</td>
+            <td>Selasa</td>
+            <td>14.30 - 17.30</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" class="checkMikro" name="mataKuliah" value="mikro1" id="mikro" onclick="totalBeban()"/></td>
+            <td>DU11256</td>
+            <td>Mikrokontroler</td>
+            <td>Selasa</td>
+            <td>14.30 - 17.30</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" class="checkMobile" name="mataKuliah" value="mobile" id="mobile" onclick="totalBeban()"/></td>
+            <td>DU11261</td>
+            <td>Mobile Application</td>
+            <td>Kamis</td>
+            <td>13.30 - 17.10</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" class="checkMobile" name="mataKuliah" value="mobile1" id="mobile" onclick="totalBeban()"/></td>
+            <td>DU11262</td>
+            <td>Mobile Application</td>
+            <td>Kamis</td>
+            <td>13.30 - 17.10</td>
+            <td>4</td>
+        </tr>
+        
+    </table>
+    <div class="divInput">
+        Total SKS: 
+        <input value="0" readonly="readonly" type="number" id="total"/>
+    </div>
+       <!-- submit overlay -->
+       <div class="submit">
+        <p data-modal-target="#modal" class="submit-awal"><strong>Submit</strong></p>
+        <div class="modal" id="modal">
+            <div class="modal-header">
+                <div class="title">Apakah anda yakin ?</div>
+    
+            </div>
+            <div class="modal-body">
+               <p data-close-button class="submit-btn1" >Tidak</p>
+               <div class="submit-btn2"> 
+                <button data-close-button id="submit-ya">Ya</button>
+               </div>
+               
+            </div>       
+        </div>
+        <div id="overlay"></div>
+    </div>
+<!-- submit overlay -->
+   </form>
+        
+
+
+   
+        </div>
+        <footer>
+            <div class="footer-container">
+                <div class="footer1 ">
+                    <div class="about-us">
+                        <h3><strong>Tentang Kita</strong></h3>
+                        <p>Aplikasi ini hanya untuk kegiatan KRRS ONLINE UNTAR. Pergunakan Aplikasi ini untuk mempermudah Anda dalam melakukan pengisian KRRS Semester</p>
+    
+                    </div>
+                </div>
+                <div class="footer2 ">
+                    <div class="follow">
+                        <h3>Media Sosial UNTAR</h3>
+                    </div>
+                        <div class="icon">
+                            <a  class="nav-link" href="http://line.me/ti/p/~@ahp9294u" target="_blank"><i class="fab fa-line"></i></a>
+                            <a  class="nav-link" href="https://www.instagram.com/untarjakarta/" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a  class="nav-link" href="https://m.facebook.com/untarjakarta/" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                            <a  class="nav-link" href="https://twitter.com/untarjakarta" target="_blank"><i class="fab fa-twitter-square"></i></a>
+                            <a  class="nav-link" href="https://www.youtube.com/channel/UCrzEyrRTTquvHwyXzEnVQCQ" target="_blank"><i class="fab fa-youtube-square"></i></a>
+    
+                        </div>
+                    <div class="line"></div>
+                </div>
+                <div class="footer3 ">
+                    <div class="location">
+                        <h3><u>Alamat:</u></h3>
+                        Jl. Letjen S. Parman No. 1 Jakarta Barat 11440, Indonesia
+                    </div>
+                    <div class="info">
+                        <div class="telp">
+                            <h3><u>Nomor Telepon:</u></h3>
+                          +62 21 569 58 723 <br>(Hunting)<br>
+                          <div class="jarak"></div>
+                               +62 811 7579 727 <br>(Whatsapp Admisi)<br>
+                        </div>
+                        <div class="email">
+                            <h3><u>Email:</u></h3>
+                            <p>humas@untar.ac.id</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="copyright">
+                <p>
+                    Hak Cipta Universitas Tarumanagara © 2020
+                </p>
+            </div>
+        </footer>
+
+
+    <script src="../js/Jquery3.5.1.min.js"></script>
+    <script src="../js/krrsOnline.js"></script>
+</body>
+</html>

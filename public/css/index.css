@@ -1,0 +1,78 @@
+.color-redbrown{
+    background: linear-gradient(180deg,#6b0101 0%,#9f0101 100%);
+}
+
+.bg-image{
+    background:url(../imgs/untar-bg-putih.png);
+    min-height: 88.5vh;
+    width:100%;
+    height:auto;
+    background-size: contain;
+    background-attachment: fixed;
+
+}
+
+
+
+.center-image{
+    
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding-top:8rem;
+  width: 50%;
+  padding-bottom:2.2rem;
+}
+
+.button1 a:hover{
+background:linear-gradient(180deg,#6b0101 0%,#9f0101 100%);
+}
+
+.container .btnn{
+    background-color:brown;
+}
+
+.iconText{
+    display:none;
+    padding-left: 15px;
+}
+
+@media screen and (max-width: 767px){
+	.text-only{
+		display:none
+    }
+    .iconText{
+        display:initial;
+    }
+
+
+    .center-image{
+
+      width: 60%;
+    
+    }
+
+
+}
+
+
+@media screen and (max-width: 550px){
+
+    .center-image{
+      width: 75%;
+    
+    }
+
+    
+.bg-image{
+
+    background-size: 550px 720px;
+    background-position: center;
+
+
+}
+
+
+}
